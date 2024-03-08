@@ -1,0 +1,53 @@
+// Create 3 programs with scope resolution operator , simple manipulators , enumiration
+// 1 scope resolution operator 
+#include <iostream.h>
+#include<conio.h>
+
+int globalVar = 10; // Global variable
+int main() 
+{	
+	
+	clrscr();
+	
+	int globalVar = 20;
+	
+	
+    	cout << "Global variable: " << ::globalVar << endl; // Prints 10
+    	cout << "Local variable: " << globalVar << endl;     // Prints 20
+	
+	getch();
+}
+
+// 2. simple manipulators 
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main() 
+{
+   double pi = 3.14159265;
+   cout << setprecision(3) << fixed << pi << endl; // output: 3.141
+   cout << setw(10) << "Hello" << endl; // output: "Hello    "
+   cout << endl;
+   return 0;
+}
+
+// 3. enumiration 
+
+#include <iostream>
+using namespace std;
+enum Color {
+    	RED,
+	GREEN,
+    	BLUE
+};
+
+int main() 
+{
+    Color c = RED;
+    if (c == RED) 
+    {
+	cout << "The color is red." << endl;
+    }
+    return 0;
+}
